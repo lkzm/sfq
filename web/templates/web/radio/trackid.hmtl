@@ -1,0 +1,10 @@
+
+
+
+{{ track.name }} 
+{{ track.artist }}
+{{ track.genre }} 
+{{ track.track }}
+
+<a href="/series_home/">Series Home</a>
+

@@ -1,0 +1,17 @@
+{% extends 'web/gallery.html' %}
+{% block title %} {{ series.prefix }} {% endblock %}}
+
+{% block content %} 
+
+
+
+{% for x in podcasts %}
+<article class = "thumb">
+	<a href="{{ x.pic.url }}" class="image"><img src="{{ x.pic.url }}"/></a>
+	<h2>Episode: {{ x.number }} - {{ x.artist }}</h2>
+	<ul class="actions">
+		<li><input type="button" onclick="location.href='/{{ series.prefix }}%{{ x.number }}/';" value = "Listen" /></li>
+	</ul>
+</article>
+{% endfor %} 
+{% endblock %} 

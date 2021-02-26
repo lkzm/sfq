@@ -1,0 +1,17 @@
+{% extends 'web/gallery.html' %}
+{% block title %} Series {% endblock %}
+{% block content %}
+
+
+{% for x in series %}
+<article class="thumb">
+	<a href="{{ x.picture.url }}" class="image"><img src="{{ x.picture.url }}" alt="" /></a>
+	<h2>{{ x.name }}</h2>
+	<ul class="actions">
+	<li><input type="button" onclick="location.href='/series%{{ x.pk }}/';" value="{{ x.prefix }}" /></li>
+	</ul>
+	<p><a href = "/series%{{ x.pk }}/">{{ x.prefix }} </a> - Episodes: {{ x.episodes }} </p>
+</article>
+{% endfor %} 
+{% endblock %}
+

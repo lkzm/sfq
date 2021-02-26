@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>{% block title %} Send Us Your Mix {% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'web/upload/assets/css/main.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				{% block header %} 
+				<h1>Send Us Your Mix</h1>
+				<p>Upload your mix blah blah<br />
+				blah</p>
+				{% endblock %}
+			</header>
+
+		
+			<form id="signup-form" method="post" action="" enctype="multipart/form-data" novalidate >
+				{% block form %}
+				{% csrf_token %}
+				<table>
+        			{{ form }}
+        			</table>
+				{% endblock %}
+				<input type="submit" value="Submit" />
+			</form>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://www.facebook.com/sfqsoundfrequencies" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                        <li><a href="https://www.instagram.com/sound_frequencies/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                        <li><a href="https://soundcloud.com/sound_frequencies" class="icon brands fa-soundcloud"><span class="label">Soundcloud</span></a></li>
+                                        <li><a href="https://www.youtube.com/results?search_query=sound+frequencies" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; SoundFrequencies.</li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script>
+                                var settings = {
+
+                                        // Images (in the format of 'url': 'alignment').
+                                                images: {
+                                                        "{% static 'backgrounds/bg01.jpg' %}" : 'center',
+                                                        "{% static 'backgrounds/bg02.jpg' %}" :'center',
+                                                        "{% static 'backgrounds/bg03.jpg' %}" : 'center',
+							"{% static 'backgrounds/bg04.jpg' %}" : 'center',
+                                               },
+
+                                        // Delay.
+                                                delay: 6000
+
+                                };
+                        </script>
+			<script src="{% static 'web/upload/assets/js/main.js' %}"></script>
+			
+
+	</body>
+</html>

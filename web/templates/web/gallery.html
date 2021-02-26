@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>{% block title %} SoundFrequencies {% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'gallery/assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'gallery/assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="{% block back %}/series_home/{% endblock %}"><strong>Back</strong></a></h1>
+						<nav>
+							<ul>
+								<li><a href="#footer" class="icon solid fa-info-circle"> About. </a></li>
+							</ul>
+
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						{% block content %}
+						{% endblock %}
+						
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer" class="panel">
+						<div class="inner split">
+							<div>
+								<section>
+									<h2>These are our podcast series.</h2>
+									<p>In 2020 we launched our own podcast series with DJs around the world.</p>
+								</section>
+								<section>
+									<h2>Follow us on ...</h2>
+									<ul class="icons">
+										
+										<li><a href="https://www.facebook.com/sfqsoundfrequencies" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/sound_frequencies/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://soundcloud.com/sound_frequencies" class="icon brands fa-soundcloud"><span class="label">Soundcloud</span></a></li>
+										<li><a href="https://www.youtube.com/results?search_query=sound+frequencies" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+									</ul>
+								</section>
+								<p class="copyright">
+									&copy; SoundFrequencies. 
+								</p>
+							</div>
+							<div>
+								<section>
+									<h2>Get in touch</h2>
+										<ul class="actions">
+											{% block footnav %}
+											<li><input type="button" onclick="location.href='/home/';" value="Home" /></li>
+											<li><input type="button" onclick="location.href='/series_home';" value="Series" class="primary" /></li>
+											<li><input type="button" onclick="location.href='/radio/';" value="Radio" /></li>
+											<li><input type="button" onclick="location.href='/upload_track/';" value="Send Us Your Mix" /></li>
+											{% endblock %}
+										</ul>
+								</section>
+							</div>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'gallery/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'gallery/assets/js/jquery.poptrox.min.js' %}"></script>
+			<script src="{% static 'gallery/assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'gallery/assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'gallery/assets/js/util.js' %}"></script>
+			<script src="{% static 'gallery/assets/js/main.js' %}"></script>
+
+	</body>
+</html>

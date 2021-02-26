@@ -1,0 +1,10 @@
+Add an episode to {{ series.prefix }} series.
+Episode number - {{ series.episodes|add:"1" }}.
+Track to ad:
+
+{% for x in tracks %} 
+<a href = "/create_podcast%{{ series.pk }}%{{ x.pk }}/">  {{ x.name }} by {{ x.artist }} </a>
+{{ x.track }} 
+{% endfor %}
+
+<a href ="/series%{{ series.pk}}/"> Back </a>

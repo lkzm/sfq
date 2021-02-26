@@ -1,0 +1,28 @@
+{% extends 'web/form.html' %}
+{% block title %}
+Send Us Your Mix
+{% endblock %}
+{% block header %} 
+                                <h1>Send Us Your Mix</h1>
+                                <p>Upload your mix blah blah<br />
+	                            blah</p>
+{% endblock %}
+ {% block form %}
+                                {% csrf_token %}
+				<table>
+{% for field in form %}
+        <tr><p>
+    <th> {{ field.label_tag }}<br> </th>
+    <td> {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+     
+        {% endfor %}
+        </td> 
+        </p></tr>
+        <br > 
+        {% endfor %} 
+    </table>
+				{% endblock %}

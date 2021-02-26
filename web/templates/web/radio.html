@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>{% block title %} SFQ Radio {% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'radio/assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'radio/assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-music"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>SFQ Radio</h1>
+								<p>Some radio description</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="/home/">Home</a></li>
+								<li><a href="/series_home/">Series</a></li>
+								<li><a href="/radio/">Radio</a></li>
+								<li><a href="/upload_track/">Send Us Your Mix</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						{% block content %} 
+
+						{% endblock %}
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy;SoundFrequencies.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="{% static 'radio/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'radio/assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'radio/assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'radio/assets/js/util.js' %}"></script>
+			<script src="{% static 'radio/assets/js/main.js' %}"></script>
+
+	</body>
+</html>
+

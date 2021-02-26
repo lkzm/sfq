@@ -1,0 +1,10 @@
+{{ series.prefix }} {{ series.episodes|add:"1" }} 
+<form action=""  enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        <table>
+        {{ form }}
+        </table>
+        <input type="submit" value="Submit" />
+</form>
+
+<a href = "/add_episode%{{ series.pk }}/"> Back </a>
